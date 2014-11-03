@@ -22,16 +22,16 @@ In order to be able to authenticate and consume the SPO REST API, one first need
 
 The sequence of authentication is as follows:
 
-1. (Tx) HTTP POST request to AAD with body content containing SAML, including *username*, *password* and *endpoint*.
-2. (Rx) HTTP POST response from AAD with body content containing _Security Token_.
-3. (Pr) Extraction of the Security Token into a variable.
-4. (Tx) HTTP GET request to SPO with header containing the Security Token.
-5. (Rx) HTTP GET response from SPO with _Cookies_.
-6. (Tx) HTTP GET request to SPO with header containing Cookies.
-7. (Rx) HTTP GET response from SPO with body content containing the _Form Digest_.
-8. (Pr) Extraction of the Form Digest into a variable.
+1. **(Tx)** HTTP POST request to AAD with body content containing SAML, including **_username_**, **_password_** and **_endpoint_**.
+2. **(Rx)** HTTP POST response from AAD with body content containing **_Security Token_**.
+3. **_(Pr)_** Extraction of the Security Token into a variable.
+4. **(Tx)** HTTP GET request to SPO with header containing the Security Token.
+5. **(Rx)** HTTP GET response from SPO with **_Cookies_**.
+6. **(Tx)** HTTP GET request to SPO with header containing Cookies.
+7. **(Rx)** HTTP GET response from SPO with body content containing the **_Form Digest_**.
+8. **_(Pr)_** Extraction of the Form Digest into a variable.
 
-_Note:_ Tx = Transmit, Rx = Recievem, Pr = Process/Manipulate.
+**Note:** Tx = Transmit, Rx = Recievem, Pr = Process/Manipulate.
 
 Once you have both the Cookies and the Form Digest, you can proceed to perform any call to consume any of services exposed by the REST API for SPO.
 
@@ -39,7 +39,7 @@ The "spo_upload_app.sh" script is very simple in terms of functionality. It will
 
 Files are uploaded to their respective folder and in the case where the file already exists, the "spo_upload_app.sh" script forces an overwrite.
 
-The "spo_upload_app.sh" script is mainly based on the *find*, *cURL*, *sed*, and *awk* commands. These are generally readily available with any Linux or Unix distribution.
+The "spo_upload_app.sh" script is mainly based on the _find_, _cURL_, _sed_, and _awk_ commands. These are generally readily available with any Linux or Unix distribution.
 
 The "spo_upload_app.sh" script does not cache any data and only maintains a reference file in order to find files only newer than the date of the file thereof. This is done to avoid re-uploading of files.
 
@@ -48,7 +48,7 @@ The "spo_upload_app.sh" script does not cache any data and only maintains a refe
 v1.0 has been built and tested on:
 
 1. CentOS 6.5
-2. cURL 7.19.7 (with support for *https*)
+2. cURL 7.19.7 (with support for _https_)
 
 # Bash Scripting
 

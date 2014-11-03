@@ -22,13 +22,13 @@ In order to be able to authenticate and consume the SPO REST API, one first need
 
 The sequence of authentication is as follows:
 
-1. **(Tx)** HTTP POST request to AAD with body content containing SAML, including **_username_**, **_password_** and **_endpoint_**.
-2. **(Rx)** HTTP POST response from AAD with body content containing **_Security Token_**.
+1. **(Tx)** HTTPS POST request to AAD with body content containing SAML, including **_username_**, **_password_** and **_endpoint_**.
+2. **(Rx)** HTTPS POST response from AAD with body content containing **_Security Token_**.
 3. **_(Pr)_** Extraction of the Security Token into a variable.
-4. **(Tx)** HTTP GET request to SPO with header containing the Security Token.
-5. **(Rx)** HTTP GET response from SPO with **_Cookies_**.
-6. **(Tx)** HTTP GET request to SPO with header containing Cookies.
-7. **(Rx)** HTTP GET response from SPO with body content containing the **_Form Digest_**.
+4. **(Tx)** HTTPS GET request to SPO with header containing the Security Token.
+5. **(Rx)** HTTPS GET response from SPO with **_Cookies_**.
+6. **(Tx)** HTTPS GET request to SPO with header containing Cookies.
+7. **(Rx)** HTTPS GET response from SPO with body content containing the **_Form Digest_**.
 8. **_(Pr)_** Extraction of the Form Digest into a variable.
 
 **Note:** Tx = Transmit, Rx = Recievem, Pr = Process/Manipulate.

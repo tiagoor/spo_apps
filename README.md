@@ -21,7 +21,7 @@ One of our requirements was to be able to upload files residing in a local direc
 In order to be able to authenticate and consume the SPO REST API, one first needs to send a login request to Azure Active Directory (AAD). If you have Office 365, you already have AAD in place (at no extra cost). Just access it at https://manage.windowsazure.com.
 
 The sequence of authentication is as follows:
--> HTTP POST request to AAD with body content containing SAML, including *username*, *password* and *endpoint*.
+--> HTTP POST request to AAD with body content containing SAML, including *username*, *password* and *endpoint*.
 <- HTTP POST response from AAD with body content containing _Security Token_.
 --
 -- Extraction of the Security Token into a variable.

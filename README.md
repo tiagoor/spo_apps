@@ -31,4 +31,4 @@ v1.0 has been built and tested on:
 
 # Bash Scripting
 
-Bash Scripting can be very plain, or very complex with functions and the parade it brings with it. These scripts have been generated with simplicity. However comments are welcome on improvements and we do hope Harvest integrates these features in the near future as it is better to have everything in one place.
+Bash Scripting can be very plain, or very complex with functions and the parade it brings with it. These scripts have been generated with simplicity. However comments are welcome on improvements and we do hope Microsoft will offer more resources to consume their REST API for the Linux community.

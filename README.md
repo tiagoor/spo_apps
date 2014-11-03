@@ -2,9 +2,13 @@
 
 SPO (www.sharepoint.com) is offered as part and parcel with Office 365.
 
-In the "small" endevour to use the REST API SPO provides, we tried to leverage the benefit of consuming the resources from our Linux machines.
+In the "small" endevour to use the REST API provided to access SPO, we have tried to leverage the benefit of consuming these resources from our Linux machines. We were successful to do so.
 
-Documentation online is ample for .NET or JavaScript snippets, however when it comes to cURL and Bash Scripting the documentation is very poor.
+Documentation online is ample for .NET or Java snippets, however when it comes to cURL and bash scripting the documentation, we can confidently say that most will be at loss.
+
+The code compiled in our apps has been sourced from examples used by .NET, PHP and Java. We had to reverse engineer the whole process in order to understand what is going on.
+
+Other options one may have considered include the use of a snoop and reviewing the headers and body content using Wireshark. We avoided this as we wanted to follow the standards and fully comply with what MSDN "provides".
 
 Anyway, we managed to pull our teeth together and come up with solutions for our requirements.
 
@@ -12,7 +16,11 @@ Anyway, we managed to pull our teeth together and come up with solutions for our
 
 https://github.com/SailonGroup/spo_apps/tree/master/spo_upload_app.
 
-One of our requirements was to be able to upload files residing in an archive directory to a Document Library in our SharePoint Online site.
+One of our requirements was to be able to upload files residing in an archive directory on a Linux machine to a Document Library in our SharePoint Online site.
+
+In order to be able to authenticate and consume the SPO REST API, one first needs to send a login request to Azure Active Directory (AAD). If you have Office 365, you already have AAD in place (at no extra cost). Just access it at https://manage.azurewindows.com.
+
+The login request with AAD will send a security token, where such token is then used to make a call on your SPO to retrieve the cookies. With the cookies retrieved, it is then safe to proceed to retrieve the Form Digest data which shall be used together with the cookies in all subsequent calls to the SPO REST API.
 
 The "spo_upload_app.sh" script is very simple in terms of functionality. It will not create missing directors, so you need to make sure that the folder structure you have in the archive directory is also present in the Document Library you wish to upload.
 

@@ -22,7 +22,7 @@ In order to be able to authenticate and consume the SPO REST API, one first need
 
 The login request with AAD will send a security token, where such token is then used to make a call on your SPO to retrieve the cookies. With the cookies retrieved, it is then safe to proceed to retrieve the Form Digest data which shall be used together with the cookies in all subsequent calls to the SPO REST API.
 
-The "spo_upload_app.sh" script is very simple in terms of functionality. It will not create missing directors, so you need to make sure that the folder structure you have in the archive directory is also present in the Document Library you wish to upload.
+The "spo_upload_app.sh" script is very simple in terms of functionality. It will not create missing directors, so you need to make sure that the folder structure you have in the archive directory is also present in the Document Library you wish to upload the files to.
 
 Files are uploaded to their respective folder and in the case where the file already exists, the "spo_upload_app.sh" script forces an overwrite.
 

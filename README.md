@@ -28,7 +28,7 @@ Files are uploaded to their respective folder and in the case where the file alr
 
 The "spo_upload_app.sh" script is mainly based on the *find*, *cURL*, *sed*, and *awk* commands. These are generally readily available with any Linux or Unix distribution.
 
-The "spo_upload_app.sh" script does not cache any data and only maintains a reference file in order to find files only new than the date of the file thereof. This is done to avoid re-uploading of files.
+The "spo_upload_app.sh" script does not cache any data and only maintains a reference file in order to find files only newer than the date of the file thereof. This is done to avoid re-uploading of files.
 
 ### Version History
 

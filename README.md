@@ -31,7 +31,7 @@ The sequence of authentication is as follows:
 7. **(Rx)** HTTPS GET response from SPO with body content containing the **_Form Digest_**.
 8. **_(Pr)_** Extraction of the Form Digest into a variable.
 
-**Note:** Tx = Transmit, Rx = Recievem, Pr = Process/Manipulate.
+**Note:** Tx = Transmit, Rx = Recieve, Pr = Process/Manipulate.
 
 Once you have both the Cookies and the Form Digest, you can proceed to perform any call to consume any of services exposed by the REST API for SPO.
 

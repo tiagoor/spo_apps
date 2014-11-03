@@ -20,7 +20,21 @@ One of our requirements was to be able to upload files residing in a local direc
 
 In order to be able to authenticate and consume the SPO REST API, one first needs to send a login request to Azure Active Directory (AAD). If you have Office 365, you already have AAD in place (at no extra cost). Just access it at https://manage.windowsazure.com.
 
-The login request with AAD will send a security token, where such token is then used to make a call on your SPO to retrieve the cookies. With the cookies retrieved, it is then safe to proceed to retrieve the Form Digest data which shall be used together with the cookies in all subsequent calls to the SPO REST API.
+The sequence of authentication is as follows:
+-> HTTP POST request to AAD with body content containing SAML, including *username*, *password* and *endpoint*.
+<- HTTP POST response from AAD with body content containing _Security Token_.
+--
+-- Extraction of the Security Token into a variable.
+--
+-> HTTP GET request to SPO with header containing the Security Token.
+<- HTTP GET response from SPO with _Cookies_.
+--
+-> HTTP GET request to SPO with header containing Cookies.
+<- HTTP GET response from SPO with body content containing the _Form Digest_.
+--
+-- Extraction of the Form Digest into a variable.
+
+Once you have both the Cookies and the Form Digest, you can proceed to perform any call to consume any of services exposed by the REST API for SPO.
 
 The "spo_upload_app.sh" script is very simple in terms of functionality. It will not create missing directors, so you need to make sure that the folder structure you have in the local directory is also present in the Document Library you wish to upload the files to.
 

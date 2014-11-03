@@ -33,7 +33,7 @@ The sequence of authentication is as follows:
 
 **Note:** Tx = Transmit, Rx = Recieve, Pr = Process/Manipulate.
 
-Once you have both the Cookies and the Form Digest, you can proceed to perform any call to consume any of services exposed by the REST API for SPO.
+Once you have both the Cookies and the Form Digest, you can proceed to perform any call to consume any of the services exposed by the REST API for SPO.
 
 The "spo_upload_app.sh" script is very simple in terms of functionality. It will not create missing directors, so you need to make sure that the folder structure you have in the local directory is also present in the Document Library you wish to upload the files to.
 

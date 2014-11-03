@@ -18,7 +18,7 @@ https://github.com/SailonGroup/spo_apps/tree/master/spo_upload_app.
 
 One of our requirements was to be able to upload files residing in an archive directory on a Linux machine to a Document Library in our SharePoint Online site.
 
-In order to be able to authenticate and consume the SPO REST API, one first needs to send a login request to Azure Active Directory (AAD). If you have Office 365, you already have AAD in place (at no extra cost). Just access it at https://manage.azurewindows.com.
+In order to be able to authenticate and consume the SPO REST API, one first needs to send a login request to Azure Active Directory (AAD). If you have Office 365, you already have AAD in place (at no extra cost). Just access it at https://manage.windowsazure.com.
 
 The login request with AAD will send a security token, where such token is then used to make a call on your SPO to retrieve the cookies. With the cookies retrieved, it is then safe to proceed to retrieve the Form Digest data which shall be used together with the cookies in all subsequent calls to the SPO REST API.
 

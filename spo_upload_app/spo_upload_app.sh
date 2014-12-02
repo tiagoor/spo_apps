@@ -220,6 +220,7 @@ if [ "${FILES_TO_UPLOAD_MATCHES}" -gt "0" ]; then
 			)')/Files/add(url='$( \
 			basename "${UPLOAD_FILE}" | \
 			sed -e "s/[ ]/%20/g" \
+			-e "s/[\']//g" \
 			)',overwrite=true)" -S -s \
 		-b "${COOKIES_TXT_FILE}" \
 		--data-binary "@${UPLOAD_FILE}" \

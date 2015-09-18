@@ -18,7 +18,7 @@ SPO_DOCUMENT_LIBRAY="Billing Library"
 ## SENDMAIL PARAMETERS
 SENDMAIL_ERROR_FROM_NAME="CentOS APPS.MACHINE"
 SENDMAIL_ERROR_FROM_EMAIL="centos.apps.machine@contosogroup.com"
-SENDMAIL_ERROR_TO_EMAIL="itss@contosogroup.com"
+SENDMAIL_ERROR_TO_EMAIL="it@contosogroup.com"
 SENDMAIL_ERROR_SUBJECT="Error from spo_upload_app.sh on $(hostname)"
 ## DELETE LOCAL FILES
 DELETE_LOCAL_FILE="true"

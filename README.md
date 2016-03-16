@@ -14,7 +14,7 @@ Anyway, we managed to pull our teeth together and come up with solutions for our
 
 ## SPO Upload App
 
-https://github.com/SailonGroup/spo_apps/tree/master/spo_upload_app.
+https://github.com/BusuttilGroup/spo_apps/tree/master/spo_upload_app.
 
 One of our requirements was to be able to upload files residing in a local directory on a Linux machine to a Document Library in our SharePoint Online site.
 
